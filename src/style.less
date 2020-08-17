@@ -35,14 +35,6 @@
             border-radius: 100px;
         }
 
-        .chart-title {
-            font-weight: 300;
-            font-size: 24px;
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            margin: 12px;
-        }
         @keyframes inner-container {
             0% {
               opacity: 1;
@@ -147,16 +139,16 @@
             display: flex;
 
             .graph {
-                width: calc(100vw - 15rem);
+                width: 70%;
 
                 .cyContainer {
                     position: relative !important;
-                    height: 42rem !important;
+                    height: 100% !important;
                 }
             }
 
             .controls {
-                width: 25rem !important;
+                width: 30%;
 
                 .filter-panel-root {
                     padding: 20px;
@@ -165,9 +157,12 @@
                     height: auto;
                     margin-bottom: 20px;
 
-                    .title {
+                    .interaction-filter-title {
                         font-family: Arial, Helvetica, sans-serif;
                         margin-bottom: 5px;
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: black;
                     }
 
                     .filter-option {
@@ -179,11 +174,11 @@
                         font-family: arial;
 
                         .option {
-                            padding: 10px;
+                            padding: 5px 10px;
                             cursor: pointer;
                         }
                         .selected {
-                            color: white;
+                            color: white !important;
                             background: rgb(72, 116, 235);
                         }
                         .not-selected {
@@ -193,6 +188,8 @@
                             display: none;
                         }
                         label {
+                            color: inherit;
+                            margin: 0;
                             cursor: pointer;
                         }
                     }
@@ -275,7 +272,7 @@
                     padding: 20px;
                     border: 1px solid black;
                     background: #F9F9F9;
-                    height: calc(100vh - 21rem);
+                    height: 40rem;
 
                     .no-selected-text {
                         color: rgb(75, 74, 74);
@@ -290,14 +287,16 @@
                     .info-container {
                         font-family: Arial, Helvetica, sans-serif;
                         line-height: 1.5em;
+                        font-size: 17px;
 
                         h2 {
                             font-weight: 400;
+                            margin: 0;
                         }
 
                         .interaction-container {
                             overflow-y: auto;
-                            max-height: calc(100vh - 27em);
+                            max-height: 15em;
 
                             .gene-container {
                                 border: solid 1px #c8c8c8;

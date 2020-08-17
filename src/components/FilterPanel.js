@@ -9,7 +9,9 @@ const FilterPanel = ({
 	const moreOptions = ['Physical', 'Genetic', 'Both'];
 	return (
 		<div className="filter-panel-root">
-			<div className="title">Filter according to Interaction Type:</div>
+			<div className="interaction-filter-title">
+				Filter according to Interaction Type:
+			</div>
 			<div className="filter-option">
 				{moreOptions.map(term => (
 					<div
