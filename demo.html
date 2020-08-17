@@ -11,15 +11,16 @@
 
   <!-- You can assume imjs is on the window.  -->
   <script src="node_modules/imjs/dist/im.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
   
   <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
   
 
-  <!-- These are styles that will be inherited from bluegenes -->
-  <link rel="stylesheet" href="css/site.css">
+  <!-- These are styles that will be inherited from BlueGenes -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.intermine.org/css/intermine/bluegenes/dev/site.css">
 
 
   <!-- These are the styles YOU implement in src/style.less -->
@@ -34,7 +35,27 @@
 </head>
 
 <body>
-  <div class="bluegenesInteractionsNetwork" id='yourDiv' />
+  <!-- This markup mimics how the tool will be displayed in BlueGenes -->
+  <div class="approot">
+    <nav class="main-nav"></nav>
+    <main>
+      <div class="container results report">
+        <div class="tools">
+          <div class="tool-container">
+            <div class="tool-header">
+              <h3 class="tool-title">
+                Interaction Network
+              </h3>
+            </div>
+            <div class="tool bluegenesInteractionsNetwork">
+              <div id='yourDiv'>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
   <script>
     window.onload = function() {
 	    //The element to attach the viewer to. Must be an existing DOM element
@@ -55,7 +76,7 @@
             // this is a bit fragile since IDs change with every build
             // but we don't want to make the code more complicated than
             // needed for the demo.
-            value: [1016209, 1263106]
+            value: [1138843, 1171020, 1016469, 1117090, 1063086, 1137672, 1178822, 1096292, 1196981, 1130151]
           }
     		},
     		toolState = {}, //to be confirmed how we use this.
