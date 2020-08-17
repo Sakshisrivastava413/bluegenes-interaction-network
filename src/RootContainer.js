@@ -119,13 +119,13 @@ const RootContainer = ({ serviceUrl, entity }) => {
 			) : (
 				<div className="innerContainer">
 					<div className="graph">
-						{data.length ? (
+						{!sharedInteractionData.length || !filteredData.length ? (
+							<h2>Data Not Found!</h2>
+						) : (
 							<GeneInteractionNetwork
 								data={toggleStatus ? sharedInteractionData : filteredData}
 								sendNodeData={getSelectedNodeData}
 							/>
-						) : (
-							<h2>Data Not Found!</h2>
 						)}
 					</div>
 					<div className="controls">
